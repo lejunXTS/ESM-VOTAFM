@@ -2,8 +2,7 @@
 Implementation of "Efficient Siamese Model for Visual Object Tracking with Attention-Based Fusion Modules" on Pytorch. 
 
 # Compile
-cd /home/xxx/xxx/SiamTrackers/3-SiamRPN/SiamRPNpp-UP 
-
+cd /path/to/yourproject
 python setup.py build_ext --inplace
 
 # Test tracker
