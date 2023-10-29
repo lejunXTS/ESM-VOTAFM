@@ -23,7 +23,7 @@ from toolkit.utils.region import vot_overlap, vot_float2str
 
 import tqdm
 
-config='models/siamrpnpp_alexnet/config.yaml'         #配置文件,不用改
+config='models/siamrpnpp_alexnet/config.yaml'         #配置文件
 snapshot='models/siamrpnpp_alexnet/snapshot/checkpoint_e42.pth'   #要测试的模型的路径
 tracker_name='Ours'   #随便取个名字
 dataset='OTB100'    #要测试的数据集
