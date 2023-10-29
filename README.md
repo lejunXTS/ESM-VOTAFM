@@ -11,7 +11,7 @@ You can either directly run the `my_test.py` file or use the following command t
 
 ```bash
 ./bin/cmd_test.sh
-
+```
 
 
 # Acknowledgement
