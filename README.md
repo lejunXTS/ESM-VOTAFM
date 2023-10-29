@@ -13,6 +13,18 @@ You can either directly run the `my_test.py` file or use the following command t
 ./bin/cmd_test.sh
 ```
 
+# Eval tracker
+You can either directly run the `my_eval.py` file or use the following command to execute the script:
+
+```bash
+./bin/cmd_eval.sh
+```
+
+
+# Training
+You can simply run the `my_train.py` file to initiate the process.
+
+
 
 # Acknowledgement
 The code is implemented based on [pysot](https://github.com/STVIR/pysot), [Owner avatar
