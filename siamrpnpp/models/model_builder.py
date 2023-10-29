@@ -36,9 +36,9 @@ class ModelBuilder(nn.Module):
         self.rpn_head = get_rpn_head(cfg.RPN.TYPE,
                                      **cfg.RPN.KWARGS)
         
-        self.tematt = GlobalAttentionBlock()       #me 注意力机制
+        self.tematt = GlobalAttentionBlock()       
         self.detatt = CBAM(256)
-        self.att1 = nn.Sequential(SELayer1(256))    #注意力机制  SE block
+        self.att1 = nn.Sequential(SELayer1(256))    
 
         # build mask head
         if cfg.MASK.MASK:
@@ -64,28 +64,28 @@ class ModelBuilder(nn.Module):
         if cfg.ADJUST.ADJUST:
             zf = self.neck(zf)
 
-        zf1 = self.tematt(zf)    #模板注意力机制 
+        zf1 = self.tematt(zf)    
         zf2 = self.att1(zf)
         zf2 = zf2 + zf
         zf = zf1 + zf2
 
         self.zf = zf
 
-    def template_short_term(self, z_st):           #模板更新部分
+    def template_short_term(self, z_st):           
         zf_st = self.backbone(z_st)
         if cfg.MASK.MASK:
             zf_st = zf_st[-1]
         if cfg.ADJUST.ADJUST:
             zf_st = self.neck(zf_st)
 
-        zf1 = self.tematt(zf_st)    #模板注意力机制 
+        zf1 = self.tematt(zf_st)    
         zf2 = self.att1(zf_st)
         zf2 = zf2 + zf_st
         zf_st = zf1 + zf2
 
         self.zf_st = zf_st
 
-    def instance(self, x):        #模板更新部分
+    def instance(self, x):       
         xf = self.backbone(x)
         if cfg.MASK.MASK:
             self.xf = xf[:-1]
@@ -93,7 +93,7 @@ class ModelBuilder(nn.Module):
         if cfg.ADJUST.ADJUST:
             xf = self.neck(xf)
 
-        xf1 = self.detatt(xf)     #搜索注意力机制
+        xf1 = self.detatt(xf)     
         xf2 = self.att1(xf)
         xf2 = xf2 + xf
         xf = xf1 + xf2
@@ -120,7 +120,7 @@ class ModelBuilder(nn.Module):
         if cfg.ADJUST.ADJUST:
             xf = self.neck(xf)
 
-        xf1 = self.detatt(xf)     #搜索注意力机制
+        xf1 = self.detatt(xf)     
         xf2 = self.att1(xf)
         xf2 = xf2 + xf
         xf = xf1 + xf2
@@ -189,7 +189,7 @@ class ModelBuilder(nn.Module):
         xf = self.backbone(search)
 
 
-        zf1 = self.tematt(zf)    #为模板分支和搜索分支分别设计的注意力机制
+        zf1 = self.tematt(zf)    
         xf1 = self.detatt(xf)
         zf2 = self.att1(zf)
         xf2 = self.att1(xf)
