@@ -98,7 +98,7 @@ class SiamRPNTracker(SiameseTracker):
         with torch.no_grad():
             self.model.template(self.z0_crop)
 
-        if cfg.TRACK.USE_CLASSIFIER:                        #模板更新部分
+        if cfg.TRACK.USE_CLASSIFIER:                        
             if cfg.TRACK.TEMPLATE_UPDATE:
                 with torch.no_grad():
                     self.model.template_short_term(self.z_crop)
