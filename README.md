@@ -1,6 +1,11 @@
 # ESM-VOTAFM
 Implementation of "Efficient Siamese Model for Visual Object Tracking with Attention-Based Fusion Modules" on Pytorch. 
 
+#  Environment setup
+```bash
+pip install -r requirements.txt
+```
+
 # Compile
 cd /path/to/yourproject
 
@@ -22,7 +27,9 @@ You can either directly run the `my_eval.py` file or use the following command t
 
 
 # Training
-For environment configuration and datasets , please refer to [pysot](https://github.com/STVIR/pysot) or [SiamTrackers
+Download the datasets：[GOT-10k](http://got-10k.aitestunion.com/downloads)
+
+For detailed environmental configuration and cutting of datasets , please refer to [pysot](https://github.com/STVIR/pysot) or [SiamTrackers
 ](https://github.com/HonglinChu/SiamTrackers).
 
 You can simply run the `my_train.py` file to initiate the process.
