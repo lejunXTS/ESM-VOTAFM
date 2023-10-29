@@ -2,6 +2,7 @@
 Implementation of "Efficient Siamese Model for Visual Object Tracking with Attention-Based Fusion Modules" on Pytorch. 
 
 #  Environment setup
+This code has been tested on Ubuntu 22.04, Python 3.8, Pytorch 1.10.0, CUDA 11.3. Please install related libraries before running this code:
 ```bash
 pip install -r requirements.txt
 ```
