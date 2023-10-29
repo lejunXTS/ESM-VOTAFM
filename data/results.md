@@ -1,1 +1,1 @@
-放训练集
+The location of the training dataset.
