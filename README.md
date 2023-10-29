@@ -7,7 +7,11 @@ cd /home/xxx/xxx/SiamTrackers/3-SiamRPN/SiamRPNpp-UP
 python setup.py build_ext --inplace
 
 # Test tracker
-You can either directly run the my_test.py file or use the following command '''./bin/cmd_test.sh''' to execute the script.
+You can either directly run the `my_test.py` file or use the following command to execute the script:
+
+```bash
+./bin/cmd_test.sh
+
 
 
 # Acknowledgement
