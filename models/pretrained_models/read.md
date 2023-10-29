@@ -1,1 +1,1 @@
-需要加载的与训练模型
+The pre-trained model to be loaded.
