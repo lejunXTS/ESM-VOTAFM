@@ -27,8 +27,7 @@ You can simply run the `my_train.py` file to initiate the process.
 
 
 # Acknowledgement
-The code is implemented based on [pysot](https://github.com/STVIR/pysot), [Owner avatar
-SiamTrackers
+The code is implemented based on [pysot](https://github.com/STVIR/pysot), [SiamTrackers
 ](https://github.com/HonglinChu/SiamTrackers) and [DROL](https://github.com/shallowtoil/DROL). 
 
 We would like to express our sincere thanks to the contributors.
