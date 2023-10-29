@@ -3,6 +3,7 @@ Implementation of "Efficient Siamese Model for Visual Object Tracking with Atten
 
 # Compile
 cd /path/to/yourproject
+
 python setup.py build_ext --inplace
 
 # Test tracker
