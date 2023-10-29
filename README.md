@@ -22,7 +22,7 @@ You can either directly run the `my_eval.py` file or use the following command t
 
 
 # Training
-For environment configuration, please refer to [pysot](https://github.com/STVIR/pysot) or [SiamTrackers
+For environment configuration and datasets , please refer to [pysot](https://github.com/STVIR/pysot) or [SiamTrackers
 ](https://github.com/HonglinChu/SiamTrackers).
 
 You can simply run the `my_train.py` file to initiate the process.
