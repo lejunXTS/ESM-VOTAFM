@@ -126,9 +126,9 @@ class CBAM(nn.Module):              #CBAM的一部分,这里仅仅采用它的�
             self.SpatialGate = SpatialGate()
 
     def forward(self, x):
-        x_out = self.ChannelGate(x)
+        #x_out = self.ChannelGate(x)
         if not self.no_spatial:
-            x_out = self.SpatialGate(x_out)
+            x_out = self.SpatialGate(x)
         return x_out
 
 
